@@ -7,7 +7,7 @@
 			"command": "/bin/g++",
 			"args": [
 				"-g",
-				"${fileDirname}/*.cpp",
+				"'${fileDirname}'/*.cpp",
 				"-o",	
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],
