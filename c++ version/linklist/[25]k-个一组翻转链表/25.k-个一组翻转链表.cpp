@@ -20,6 +20,7 @@
 
 
 class Solution {
+    // 翻转给定的一小段链表
     void reverse(ListNode *hh, int n){
         ListNode *head = hh->next, *temp = head->next;
         int i = 1;
@@ -38,6 +39,10 @@ public:
         hh->next = head;
         int n = 0;        
         while(1){
+            // 因为翻转子链表的过程中会移动tail指向的元素，却没有修改tail的指向
+            // 所以会导致后续循环的pre元素指向不对
+            // 因此每次循环都要重新定位tail元素
+            // 以此获取pre元素
             tail = hh;
             for(int j=0; j<n*k;j++)tail = tail->next;
             n++;
