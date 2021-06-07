@@ -7,13 +7,11 @@
 // @lc code=start
 
 // 典型dp题，关键是找到状态转移方程
-// 那么，状态转移方程？
-// d[i]表[0~i]能得到的最优结果
-// d[0] = nums[0], d[1] = max(nums[0], nums[1]), d[2] = nums[2] + d[0]
-// 当i > 2时，d[i] = nums[i] + max(d[0] ~ d[i-2])
-// 妙啊
-// 直接用一个temp去存d[0]-d[i-2]当中的最大值就行了！
-// 好像直接连数组都不需要啊
+// define: d[i]表[0~i]能得到的最优结果
+// init: d[0] = nums[0], d[1] = max(nums[0], nums[1]), d[2] = max(nums[2] + d[0], d[1])
+// so if i > 1, d[i] = max(d[i-2]+nums[i], d[i-1])
+
+
 class Solution {
 public:
     int rob(vector<int>& nums) {
