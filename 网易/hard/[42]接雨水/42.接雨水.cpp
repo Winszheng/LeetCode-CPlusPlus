@@ -18,6 +18,8 @@ using namespace std;
 // 累计值即为雨水量
 // 代码简单也没坑，主要是思路
 
+// 虽然也可以用单调栈，但是没必要，写得费劲
+
 // @lc code=start
 class Solution {
 public:
