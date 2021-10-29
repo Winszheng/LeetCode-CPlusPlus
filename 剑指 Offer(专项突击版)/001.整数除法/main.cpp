@@ -24,7 +24,7 @@ public:
                 t += t;
                 i += i;
             }
-            cout<<"here"<<endl;
+            
             ta -= t;
             re += i;
         }
