@@ -11,18 +11,7 @@ using namespace std;
 class Solution{
 public:
     int bags(vector<int> &nums, int m) {
-        vector<bool> dp(m+1, false); dp[0] = true;
-        for(int n : nums) {
-            if(n <= m) dp[n] = true;
-            for(int i=n+1; i+n<=m; i++){
-                if(dp[i])dp[i+n] = true;    
-            }
-        }
-        
-        for(int i=m; i>0; i--){
-            if(dp[i])return i;
-        }
-        return -1;
+       
     }
 };
 
